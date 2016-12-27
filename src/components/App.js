@@ -1,20 +1,21 @@
-var React = require("react");
-//var DOM = require("react-dom")
-var ReactDOM = require("react-DOM");
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+//import HelloMessage from './components/HelloMessage.js';
 
-var App = () => {
+
+//class based component
+class App extends Component {
 
   constructor(props){
     super(props)
   }
 
-
   render (){
     return (
-      <div><HelloMessage {this.props.name}></div>
+      <div> Hello {this.props.name}, this is a class based component</div>
       )
   }
 
 };
 
-window.App = App;
+export default App;
