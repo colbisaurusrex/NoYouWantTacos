@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloMessage from './components/HelloMessage.js';
+import SearchBar from './components/SearchBar.js';
 
 //this is a functional component
 const App = () => {
   return (
     <div>
-    <HelloMessage name='Colby' />
+    <SearchBar />
     </div>
     )
 }
