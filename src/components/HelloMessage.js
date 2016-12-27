@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-var HelloMessage = () => {
-    return (
-      <div>Hello Colby</div>
+class HelloMessage extends Component{
+
+    constructor(props){
+      super(props)
+    }
+
+    render(){
+      return (
+        <div>Hello {this.props.name}</div>
       )
-}
+    }
+};
 
 export default HelloMessage;
