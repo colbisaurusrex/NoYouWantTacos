@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import SearchBar from './components/SearchBar.js';
 import Map from './components/Map.js'
+import TacoList from './components/TacoList.js'
 
 //google maps api key
 const API_KEY = 'AIzaSyATwL4uEOxEdZYgb6t-YHFUGsQkgTgBu_o'
@@ -11,14 +12,10 @@ const API_KEY = 'AIzaSyATwL4uEOxEdZYgb6t-YHFUGsQkgTgBu_o'
 const App = () => {
   return (
    <div>
-      <div>
-        <SearchBar />
-        <Map />
-      </div>
-      <div className="tacoList">
-        this is where the list of taco joints will go.
-      </div>
-    </div>
+      <SearchBar />
+      <Map />
+      <TacoList />
+  </div>
     )
 }
 
