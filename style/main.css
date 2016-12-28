@@ -1,13 +1,14 @@
 
-.tacoList {
-  float: right;
-  padding-bottom: : 20px;
-  padding-right: 50px;
+.places {
+  height: 500px;
+  width: 300px;
+  background-color: blue;
 }
 
-.tacoMap {
-  text-align: center;
-  margin-top: 50px;
+.map {
+  height: 250px;
+  width: 300px;
+  background-color: red;
 }
 
 .centering {
