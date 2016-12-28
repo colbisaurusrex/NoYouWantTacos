@@ -25,12 +25,12 @@ class SearchBar extends Component{
          //"this" loses context, so we have to bind it
          //this.setState triggers a re rendering in React.js
          //the value of the input is then changed after the handleInputChange is called. In this way, it is a controlled component and it is being told what its value is, instead of the other way around.
-        <div>
-          <p>Enter a food item, i.e. pasta</p>
+        <div className="centering">
+          <p >Enter a food item, i.e. pasta</p>
           <input
             value={this.state.userInput}
             onChange={this.handleInputChange.bind(this)}/>
-          <p>{this.state.userInput} isn't tacos</p>
+          <p>{this.state.userInput}? No, you want tacos.</p>
         </div>
 
 
