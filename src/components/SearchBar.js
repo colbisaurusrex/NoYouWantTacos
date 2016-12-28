@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 //this is a class based component. Used whenever we need to be aware of state.
 class SearchBar extends Component{

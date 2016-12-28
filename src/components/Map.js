@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 
-
-var Map = () => (
-  <div>
-    This is where the map will be.
-  </div>
-);
+class Map extends Component {
+  render() {
+    return (
+      <div>This is the Map</div>
+      );
+  }
+};
 
 export default Map;
