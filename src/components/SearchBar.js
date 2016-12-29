@@ -9,9 +9,7 @@ class SearchBar extends Component{
       }
     }
 
-    //event handler
     handleSearchInputChange(event){
-      //here is where we update state
       this.props.handleSearch(event.target.value)
       this.setState({
         value: event.target.value
@@ -23,6 +21,7 @@ class SearchBar extends Component{
         <div className="centering">
           <p>Enter a city</p>
           <input
+            ref="query"
             value={this.state.value}
             onChange={this.handleSearchInputChange.bind(this)}/>
         </div>

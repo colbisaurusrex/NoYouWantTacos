@@ -40,11 +40,13 @@ class App extends Component {
       })
   }
 //called from Nav tag, need to create searchFourSquare function
-  getVenues(){
-
-    this.props.searchFourSquare();
+  getVenues(query){
+    this.props.searchFourSquare(query, (venues) =>
+        this.setState({
+          venues: venues
+        })
+      );
   }
-
 
   render() {
       const location = {
