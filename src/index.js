@@ -46,20 +46,11 @@ class App extends Component {
           lng: -122.41
         }
 
-      const pins = [
-          {
-            location: {
-              lat: 37.77,
-              lng: -122.41
-            }
-          }
-        ]
-
         return (
              <div>
                 <SearchBar />
                 <div className="map">
-                  <Map location={location} pins={pins} />
+                  <Map location={location} pins={this.state.venues} />
                 </div>
                 <div className="places">
                   <Places venues={this.state.venues} />
