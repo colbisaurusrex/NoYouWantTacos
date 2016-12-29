@@ -6,9 +6,10 @@
 }
 
 .map {
-  height: 250px;
-  width: 300px;
-  background-color: red;
+  height: 450px;
+  width: 900px;
+  padding-left: 40px;
+  padding-bottom: 20px;
 }
 
 .centering {
