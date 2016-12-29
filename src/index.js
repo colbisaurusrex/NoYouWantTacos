@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar.js';
 import Map from './components/Map.js'
 import Places from './components/Places.js'
 import superagent from 'superagent'
+import Nav from './components/Nav.js'
 
 //google maps api key
 // const API_KEY = 'AIzaSyATwL4uEOxEdZYgb6t-YHFUGsQkgTgBu_o'
@@ -22,7 +23,7 @@ class App extends Component {
   componentDidMount(){
     console.log('yep, it mounted')
 
-    const url = 'https://api.foursquare.com/v2/venues/search?ll=37.77,-122.41&client_id=U4BVKAV0XON43Z2ADZMXK4ERXYWA0P10ATASRIWZZJZXBJAJ&client_secret=3GXHLB4140JZ25TGJF410E2B4Q5VE2YBQIISGWPUWHV1O4CK&v=20161229'
+    const url = 'https://api.foursquare.com/v2/venues/search?ll=37.77,-122.41&limit=10&query=tacos&client_id=U4BVKAV0XON43Z2ADZMXK4ERXYWA0P10ATASRIWZZJZXBJAJ&client_secret=3GXHLB4140JZ25TGJF410E2B4Q5VE2YBQIISGWPUWHV1O4CK&v=20161229'
 
     //as soon as the app component mounts, I make a request for data from FourSquare
     superagent
@@ -38,6 +39,11 @@ class App extends Component {
         })
       })
   }
+//called from Nav tag, need to create searchFourSquare function
+  // getVenues(){
+
+  //   this.props.searchFourSquare();
+  // }
 
 
   render() {
@@ -45,10 +51,10 @@ class App extends Component {
           lat: 37.77,
           lng: -122.41
         }
-
+// handleSearchInputChange={this.getVenues.bind(this)}, needs to go in the Nav tag
         return (
              <div>
-                <SearchBar />
+                <Nav />
                 <div className="map">
                   <Map location={location} pins={this.state.venues} />
                 </div>
@@ -60,4 +66,6 @@ class App extends Component {
         }
 }
 
+//pass searchFourSquare function as a property on the App
+//searchFourSquare={searchFourSquare}
 ReactDOM.render(<App />, document.getElementById("hello"));

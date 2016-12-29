@@ -2,7 +2,6 @@
 .places {
   height: 500px;
   width: 300px;
-  background-color: blue;
 }
 
 .map {
@@ -10,6 +9,7 @@
   width: 900px;
   padding-left: 40px;
   padding-bottom: 20px;
+  padding-top: 40px;
 }
 
 .centering {
