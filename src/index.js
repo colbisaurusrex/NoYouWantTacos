@@ -10,17 +10,23 @@ import Places from './components/Places.js'
 
 //this is a functional component
 const App = () => {
-  return (
-   <div>
-      <SearchBar />
-      <div className="map">
-        <Map />
+
+      const location = {
+        lat: 30,
+        lng: 80
+      }
+
+      return (
+       <div>
+          <SearchBar />
+          <div className="map">
+            <Map location={location}/>
+          </div>
+          <div className="places">
+            <Places />
+          </div>
       </div>
-      <div className="places">
-        <Places />
-      </div>
-  </div>
-    )
+        )
 }
 
 ReactDOM.render(<App />, document.getElementById("hello"));
