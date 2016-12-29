@@ -1,37 +1,30 @@
 import React, { Component } from 'react';
 
-//this is a class based component. Used whenever we need to be aware of state.
 class SearchBar extends Component{
-
-    //all js classes have a function called constructor, it's the only one called automatically
     constructor(props){
-      //but Component, the parent to SearcBar, also has a constructor function and if that is the one we want to call, we must call super()
       super(props)
-      //state goes within the constructor call
-      //only time we manipulate state in this way, this basically like instantiating it. From now on, we update. And we do that with this.setState.
-      this.state = {userInput: ''}
+
+      this.state = {
+        value: ''
+      }
     }
 
     //event handler
-    handleInputChange(event){
+    handleSearchInputChange(event){
       //here is where we update state
-      this.props.handleSearchInputChange(event.target.value);
+      this.props.handleSearch(event.target.value)
       this.setState({
-        userInput: event.target.value
-      });
+        value: event.target.value
+      })
     }
 
     render(){
       return (
-         // onChange is an event listener
-         //"this" loses context, so we have to bind it
-         //this.setState triggers a re rendering in React.js
-         //the value of the input is then changed after the handleInputChange is called. In this way, it is a controlled component and it is being told what its value is, instead of the other way around.
         <div className="centering">
-          <p >Enter a city</p>
+          <p>Enter a city</p>
           <input
-            value={this.state.userInput}
-            onChange={this.handleInputChange.bind(this)}/>
+            value={this.state.value}
+            onChange={this.handleSearchInputChange.bind(this)}/>
         </div>
 
 

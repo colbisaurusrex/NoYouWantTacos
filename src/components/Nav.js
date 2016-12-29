@@ -5,11 +5,11 @@ import SearchBar from './SearchBar.js';
 // needs to passed as param in Nav{handleUserInputChange}
 
 // needs to be added to SearchBar tag handleSearchInputChange={handleSearchInputChange}
-var Nav = () => (
+var Nav = ({handleSearch}) => (
 
       <nav>
         <div>
-          <SearchBar />
+          <SearchBar handleSearch={handleSearch}/>
         </div>
       </nav>
 
