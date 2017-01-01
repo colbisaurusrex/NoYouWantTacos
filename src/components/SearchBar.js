@@ -23,7 +23,7 @@ class SearchBar extends Component{
           <input
             ref="query"
             value={this.state.value}
-            onChange={this.handleSearchInputChange.bind(this)}/>
+            onInput={this.handleSearchInputChange.bind(this)}/>
         </div>
 
 

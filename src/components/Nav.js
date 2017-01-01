@@ -7,10 +7,8 @@ import SearchBar from './SearchBar.js';
 // needs to be added to SearchBar tag handleSearchInputChange={handleSearchInputChange}
 var Nav = ({handleSearch}) => (
 
-      <nav>
-        <div>
+      <nav className="form-control">
           <SearchBar handleSearch={handleSearch}/>
-        </div>
       </nav>
 
   );

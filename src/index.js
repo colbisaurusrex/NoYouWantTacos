@@ -7,10 +7,7 @@ import superagent from 'superagent'
 import Nav from './components/Nav.js'
 import searchFourSquare from './components/searchFourSquare.js'
 
-//google maps api key
-// const API_KEY = 'AIzaSyATwL4uEOxEdZYgb6t-YHFUGsQkgTgBu_o'
 
-//this is a functional component
 class App extends Component {
 
   constructor() {
@@ -22,7 +19,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log('yep, it mounted')
 
     const url = 'https://api.foursquare.com/v2/venues/search?near=san_francisco&limit=10&query=tacos&client_id=U4BVKAV0XON43Z2ADZMXK4ERXYWA0P10ATASRIWZZJZXBJAJ&client_secret=3GXHLB4140JZ25TGJF410E2B4Q5VE2YBQIISGWPUWHV1O4CK&v=20161229'
 
@@ -39,7 +35,7 @@ class App extends Component {
         })
       })
   }
-//called from Nav tag, need to create searchFourSquare function
+
   getVenues(query){
     this.props.searchFourSquare(query, (venues) =>
         this.setState({
@@ -53,7 +49,7 @@ class App extends Component {
           lat: 37.77,
           lng: -122.41
         }
-// handleSearchInputChange={this.getVenues.bind(this)}, needs to go in the Nav tag
+
         return (
              <div>
                 <Nav handleSearch={this.getVenues.bind(this)} />
@@ -68,6 +64,4 @@ class App extends Component {
         }
 }
 
-//pass searchFourSquare function as a property on the App
-//searchFourSquare={searchFourSquare}
-ReactDOM.render(<App searchFourSquare={searchFourSquare}/>, document.getElementById("hello"));
+ReactDOM.render(<App searchFourSquare={searchFourSquare}/>, document.getElementById("app"));
