@@ -19,11 +19,13 @@ class SearchBar extends Component{
     render(){
       return (
         <div className="centering">
-          <p>Enter a city</p>
+          <input placeholder="Enter a food category"/>
           <input
             ref="query"
             value={this.state.value}
-            onInput={this.handleSearchInputChange.bind(this)}/>
+            onInput={this.handleSearchInputChange.bind(this)}
+            placeholder="Enter any city"
+            />
         </div>
 
 

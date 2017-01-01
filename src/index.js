@@ -19,21 +19,22 @@ class App extends Component {
   }
 
   componentDidMount(){
+    //I am leaving this in case I want it to get data when the page initially loads
+    console.log('yep, it mounted')
+    // const url = 'https://api.foursquare.com/v2/venues/search?near=san_francisco&limit=10&query=tacos&client_id=U4BVKAV0XON43Z2ADZMXK4ERXYWA0P10ATASRIWZZJZXBJAJ&client_secret=3GXHLB4140JZ25TGJF410E2B4Q5VE2YBQIISGWPUWHV1O4CK&v=20161229'
 
-    const url = 'https://api.foursquare.com/v2/venues/search?near=san_francisco&limit=10&query=tacos&client_id=U4BVKAV0XON43Z2ADZMXK4ERXYWA0P10ATASRIWZZJZXBJAJ&client_secret=3GXHLB4140JZ25TGJF410E2B4Q5VE2YBQIISGWPUWHV1O4CK&v=20161229'
-
-    //as soon as the app component mounts, I make a request for data from FourSquare
-    superagent
-      .get(url)
-      .query(null)
-      .set('Accept','text/json')
-      .end( (error, response) => {
-        //this is an array of venues from the FourSquare response
-        const venues = response.body.response.venues
-        this.setState({
-          venues: venues
-        })
-      })
+    // //as soon as the app component mounts, I make a request for data from FourSquare
+    // superagent
+    //   .get(url)
+    //   .query(null)
+    //   .set('Accept','text/json')
+    //   .end( (error, response) => {
+    //     //this is an array of venues from the FourSquare response
+    //     const venues = response.body.response.venues
+    //     this.setState({
+    //       venues: venues
+    //     })
+    //   })
   }
 
   getVenues(query){
