@@ -1,4 +1,9 @@
 ### NPM ###
 node_modules/
 
+### webpack bundle ###
+dist/
 
+### dev environment ###
+package.json
+.babelrc
